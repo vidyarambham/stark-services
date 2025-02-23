@@ -28,6 +28,10 @@ public class Customer {
     return new Customer(firstName, lastName, email);
   }
 
+  public Long getId() {
+    return id;
+  }
+
   public String getFirstName() {
     return firstName;
   }
