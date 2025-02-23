@@ -16,13 +16,17 @@ public class Customer {
   private String lastName;
   private String email;
 
+  public Customer() {  }
+
   public Customer(String firstName, String lastName, String email) {
     this.firstName = firstName;
     this.lastName = lastName;
     this.email = email;
   }
 
-  public Customer() {  }
+  public static Customer of(String firstName, String lastName, String email) {
+    return new Customer(firstName, lastName, email);
+  }
 
   public String getFirstName() {
     return firstName;
@@ -34,9 +38,5 @@ public class Customer {
 
   public String getEmail() {
     return email;
-  }
-
-  public static Customer of(String firstName, String lastName, String email) {
-    return new Customer(firstName, lastName, email);
   }
 }
