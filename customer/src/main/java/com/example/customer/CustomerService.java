@@ -20,7 +20,7 @@ public class CustomerService {
         request.email()
     );
     customerRepository.save(customer);
-    var body = restClient.get().uri("http://localhost:8081/api/v1/fraud-check/" + customer.getId())
+    var body = restClient.get().uri("http://fraud/api/v1/fraud-check/" + customer.getId())
             .retrieve()
             .body(FraudCheckResponse.class);
 
